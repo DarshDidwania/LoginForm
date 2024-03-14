@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form with Random Captcha</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="capf.js"></script>
+</head>
+
+<body>
+    <h2>LOGIN FORM WITH RANDOM CAPTCHA</h2>
+    <form onsubmit="check();return false;">
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your Name" name="name" id="name">
+
+        <label for="age">Age:</label>
+        <input type="number" placeholder="Enter your Age" name="age" id="age"><br>
+
+        <label>Gender:</label>
+        <div>
+            <input type="radio" name="gen" id="male">Male
+            <input type="radio" name="gen" id="female">Female
+            <input type="radio" name="gen" id="others">Others
+        </div><br>
+
+        <label for="phn">Phone Number:</label>
+        <input type="text" placeholder="Enter your Phone Number" name="phn" id="phn"><br>
+
+        <button onclick="gencap(100000,999999);return false;" id="genc">Generate Captcha</button><br><br>
+
+        <label for="cap">Captcha:</label>
+        <input type="number" placeholder="Enter the Captcha" name="cap" id="capc">
+
+        <div id="res"></div>
+
+        <div style="text-align: center;">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
